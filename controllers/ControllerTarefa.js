@@ -75,7 +75,7 @@ router.get("/periodo/:ini/:fim", async (req, res) => {
 	const fim = new Date(req.params.fim);
 	try {
 		const tarefas = await Tarefa.find({
-			dataIni: {
+			dataFim: {
 				$gte: ini,
 				$lte: fim,
 			},
